@@ -1,7 +1,7 @@
 import easyocr
 def text_recognize(file_path):
     reader = easyocr.Reader(["ru"])
-    result = reader.readtext(file_path, detail=0, allowlist='1,2,3,4,5,6,7,8,9,0')
+    result = reader.readtext(file_path, detail=0, allowlist='1,2,3,4,5,6,7,8,9,0,А,Б,В,Г,Е,З,И,К,Л,М,Н,О,П,С,Т,Х,Ч,Ь,Э,Я,а,б,в,г,е,з,и,к,л,м,н,о,п,с,т,х,ч,ь,э,я')
 
     # Проверяем, что есть как минимум два элемента в результате
     if len(result) >= 3:
